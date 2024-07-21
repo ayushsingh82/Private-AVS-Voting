@@ -149,12 +149,14 @@ function PrivateVoting() {
     }
   };
 
+  // <img src={"/band.svg"} alt="Band" />
+
   return (
-    <div className="mt-5">
+    <div className="mt-5 ">
       <div className="flex flex-col text-center justify-center items-center mb-10 mt-10">
        
-        <h1 className="my-10 text-2xl font-bold text-gray-500">Private Voting for AVS</h1>
-        <img src={"/band.svg"} alt="Band" />
+        <h1 className="my-10 text-2xl font-bold text-black">Private Voting for AVS</h1>
+      
       </div>
       <div className="flex flex-col md:flex-row">
         <div className="flex flex-col md:w-1/2 p-4 ">
@@ -226,7 +228,7 @@ function PrivateVoting() {
           </form>
           <div className="text-gray-500">
             {encryptedChoice && (
-              <div>
+              <div className="text-black">
                 <p>Ciphertext for Choice:</p>
                 <div className="overflow-y-auto h-10 flex flex-col">
                   <p>{"0x" + encryptedChoice.substring(0, 26) + "..."}</p>
@@ -234,7 +236,7 @@ function PrivateVoting() {
               </div>
             )}
             {encryptedAmount && (
-              <div>
+              <div className="text-black">
                 <p>Ciphertext for Count:</p>
                 <div className="overflow-y-auto h-10 flex flex-col">
                   <p>{"0x" + encryptedAmount.substring(0, 26) + "..."}</p>
@@ -247,20 +249,20 @@ function PrivateVoting() {
             {loading && <div>{loading}</div>}
           </div>
         </div>
-        <div className="flex flex-col md:w-1/2 p-4 overflow-y-auto h-96 bg-amber-300">
-          <div className="text-lg">Code Snippets:</div>
+        <div className="flex flex-col md:w-1/2 p-4 overflow-y-auto h-96 bg-amber-300 bg-black">
+          <div className="text-lg text-white">Anonymous Dao</div>
           <br></br>
-          <div className="text-sm">
+          <div className="text-sm text-white">
             User vote count and choice are stored on-chain in an encryted
             manner.
           </div>
           <img src={"/CodePrivateVoting1.svg"} alt="CodePrivateVoting1" />
-          <div className="text-sm">
+          <div className="text-sm text-white">
             Both &quot;In Favor&quot; and &quot;Against&quot; are incremented by the actual vote
             count or 0. But you can&apos;t tell!
           </div>
           <img src={"/CodePrivateVoting2.svg"} alt="CodePrivateVoting2" />
-          <div className="text-sm">
+          <div className="text-sm text-white">
             Users are able to view their own decrypted vote count and choice by
             signing an EIP-712 signature.
           </div>
@@ -281,3 +283,34 @@ function PrivateVoting() {
 }
 
 export default PrivateVoting;
+
+
+
+// <div className="flex flex-col md:w-1/2 p-4 overflow-y-auto h-96 bg-amber-300">
+// <div className="text-lg">Code Snippets:</div>
+// <br></br>
+// <div className="text-sm">
+//   User vote count and choice are stored on-chain in an encryted
+//   manner.
+// </div>
+// <img src={"/CodePrivateVoting1.svg"} alt="CodePrivateVoting1" />
+// <div className="text-sm">
+//   Both &quot;In Favor&quot; and &quot;Against&quot; are incremented by the actual vote
+//   count or 0. But you can&apos;t tell!
+// </div>
+// <img src={"/CodePrivateVoting2.svg"} alt="CodePrivateVoting2" />
+// <div className="text-sm">
+//   Users are able to view their own decrypted vote count and choice by
+//   signing an EIP-712 signature.
+// </div>
+// <img src={"/CodePrivateVoting3.svg"} alt="CodePrivateVoting3" />
+// <div>
+//   Smart Contract Implementation:{" "}
+//   <a
+//     target="_blank" rel="noreferrer"
+//     href="https://docs.inco.org/getting-started/example-dapps/private-voting"
+//   >
+//     Here
+//   </a>
+// </div>
+// </div>

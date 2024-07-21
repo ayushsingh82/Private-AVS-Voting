@@ -18,7 +18,7 @@ function App() {
   if (!isInitialized) return null;
 
   return (
-    <div className="App flex flex-col justify-center font-press-start text-black">
+    <div className="App flex flex-col justify-center font-press-start text-black bg-blue-300">
       <div>
         <Connect>
           {() => (

@@ -147,7 +147,7 @@ export const Connect = ({ children }) => {
         </button>
       )}
       {connected && (
-        <div className="Connect__account text-gray-500">
+        <div className="Connect__account text-blue-700">
           Connected with{" "}
           {account.substring(0, 5) +
             "..." +
